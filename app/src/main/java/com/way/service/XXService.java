@@ -1,8 +1,5 @@
 package com.way.service;
 
-import java.util.HashSet;
-import java.util.List;
-
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningTaskInfo;
 import android.app.AlarmManager;
@@ -32,6 +29,9 @@ import com.way.util.PreferenceConstants;
 import com.way.util.PreferenceUtils;
 import com.way.util.T;
 import com.way.xx.R;
+
+import java.util.HashSet;
+import java.util.List;
 
 public class XXService extends BaseService implements EventHandler,
 		BackPressHandler {
@@ -175,7 +175,7 @@ public class XXService extends BaseService implements EventHandler,
 			return;
 		}
 		if (mConnectingThread != null) {
-			L.i("a connection is still goign on!");
+			L.i("a connection is still going on!");
 			return;
 		}
 		mConnectingThread = new Thread() {
